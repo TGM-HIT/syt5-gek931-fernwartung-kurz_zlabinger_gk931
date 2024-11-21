@@ -90,3 +90,32 @@ $ anydesk
 
 #### Remote Host
 ![Remote-Host](./assets/remote-host.png)
+
+## Wireguard
+Requirements:
+* docker
+* docker-compose
+
+### Set Up
+
+```bash
+$ cd wireguard
+$ docker-compose up -d
+```
+
+### Wireguard Server
+```
+# Post Up Script
+iptables -A FORWARD -i %1 -j ACCEPT; iptables -A FORWARD -o wg0 -j ACCEPT; iptables -t nat -A POSTROUTING -o eth+ -j MASQUERADE
+
+# Post Down Script
+iptables -D FORWARD -i %1 -j ACCEPT; iptables -D FORWARD -o wg0 -j ACCEPT; iptables -t nat -D POSTROUTING -o eth+ -j MASQUERADE
+```
+
+### Global Settings
+Use suggested IP as Endpoint Address
+
+### Create new Client
+IP Allocation: `10.252.1.1/32`
+
+![Mobile VPN](./assets/VPN.png)
