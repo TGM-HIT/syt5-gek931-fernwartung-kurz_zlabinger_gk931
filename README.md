@@ -76,6 +76,8 @@ $ sh ./docker-compose-helper.sh start # To start the docker container
 $ sh ./docker-compose-helper.sh stop # To stop the docker container
 ```
 
+Access the desktop environment via [`localhost:3000`](http://localhost:3000)
+
 ## RDP
 Mittels anydesk (Nur Xorg)
 
