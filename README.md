@@ -12,7 +12,7 @@ $ nano /etc/ssh/sshd_conf
 
 PermitRootLogin no
 AllowTCPForwarding yes
-GatewayPorts no
+GatewayPorts yes
 ListenAddress 127.0.0.1
 
 # As root
