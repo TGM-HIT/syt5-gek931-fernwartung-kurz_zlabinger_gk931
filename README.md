@@ -74,3 +74,18 @@ $ sh ./docker-compose-helper.sh build # To build the docker image
 $ sh ./docker-compose-helper.sh start # To start the docker container
 $ sh ./docker-compose-helper.sh stop # To stop the docker container
 ```
+
+## RDP
+Mittels anydesk (Nur Xorg)
+
+### Installation NixOS
+```bash
+$ nix-shell -p anydesk
+$ anydesk
+```
+
+#### Client
+![Client](./assets/client.png)
+
+#### Remote Host
+![Remote-Host](./assets/remote-host.png)
