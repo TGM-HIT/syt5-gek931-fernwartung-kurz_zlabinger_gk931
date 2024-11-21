@@ -62,3 +62,15 @@ $ ssh-keygen -t rsa -b 4096
 
 $ ssh -p 2222 localhost
 ```
+
+## Webaccessed Desktop Environment
+
+Requirements:
+* docker
+* docker-compose
+
+```bash
+$ sh ./docker-compose-helper.sh build # To build the docker image
+$ sh ./docker-compose-helper.sh start # To start the docker container
+$ sh ./docker-compose-helper.sh stop # To stop the docker container
+```
